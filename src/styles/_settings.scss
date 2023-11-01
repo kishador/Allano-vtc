@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "font-1";
+    src: url(../assets/fonts/Poppins-Light.otf);
+  }
+@font-face {
+    font-family: "font-2";
+    src: url(../assets/fonts/TT-Norms-Pro-ExtraBold-Italic.otf);
+  }
+  @font-face {
+    font-family: "font-italic";
+    src: url(../assets/fonts/Poppins-LightItalic.otf);
+  } 
+
+  $font-1: "font-1", sans-serif;
+  $font-2: "font-2", serif;
+  $font-3: "font-italic", serif;
+
+$color-1:  rgb(255, 255, 255);
+$color-2: #e63042;
+$color-4: #e5546374;
+$color-3: #12111d;
+body {
+    margin: 0;
+    font-family: $font-1;
+    background-color: $color-3;
+    color: $color-1;
+   
+    width:100%
+    
+}
+main {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+h1 {
+    font-family: $font-2;
+    font-weight: bold;;
+    animation: horizontal-shaking 0.5s reverse;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+}
+}
+
+h2 {
+  font-family: $font-2;
+  color: $color-1;
+  text-decoration: dotted underline  $color-2;
+  text-align: center;
+  margin: 0 0 10px;
+  text-shadow: 0 0 2px goldenrod;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+h2 span {
+  color: $color-2;
+  font-size: 30px;
+  margin-right: 1px;
+}
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: $color-1;
+  margin: 0;
+  color: $color-3;
+  display: flex;
+  font-size: 11px;
+  box-shadow:  0 1px 15px $color-1, inset 0 1px 3px #12111d9c;
+}
+.blur {
+  content: "";
+  position: absolute;
+  width: 13rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: $color-4;
+  z-index: -9;
+  top: 0%;
+  right: 5%;
+  filter: blur(72px);
+}

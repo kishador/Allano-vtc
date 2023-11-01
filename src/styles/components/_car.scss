@@ -1,0 +1,72 @@
+#car> * {
+    box-sizing: border-box;
+}
+#car {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    position: relative;
+}
+#car h2 {
+    margin-bottom: 24px;
+}
+#car p:first-of-type {
+    max-width: 800px;
+    padding: 0 20px 15px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $color-2;
+    border-radius: 30px;
+    box-shadow: 0 1px 1px $color-1;
+}
+.accessories, .features{
+    text-align: start;
+    width: 600px;
+    padding-left: 5px;
+    margin-top: 0;
+}
+.accessories li::before {
+    content: "\002714";
+    color: green;
+    margin-right: 3px;
+}
+.features li {
+    display: flex;
+}
+.features li::before {
+    content: "\0027A0";
+    color: $color-2;
+    margin-right: 3px;
+}
+.leaf-icon {
+    content: "";
+    background-image: url("../assets/icons/leaf-solid.svg");
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+
+} 
+.carousel-root{
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.carousel-root .carousel .slide img{
+    width: 600px;
+    height: 450px;
+}
+
+@media screen and (max-width: 620px) {
+    .accessories, .features{
+        width: 100%;
+        padding-right: 2px;
+    }
+    .carousel-root .carousel .slide img{
+        width: 100%;
+        height: auto;
+    }
+}
